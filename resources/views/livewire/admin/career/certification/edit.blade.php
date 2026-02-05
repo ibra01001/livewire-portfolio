@@ -86,7 +86,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
-                                <span class="font-bold">New PDF Ready: {{ $pdf->getClientOriginalName() }}</span>
+
                                 <button type="button" wire:click="$set('pdf', null)"
                                     class="text-red-500 hover:text-red-700 font-bold ml-2">Cancel</button>
                             </div>
