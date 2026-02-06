@@ -51,7 +51,7 @@
                         </div>
 
                         <!-- Projects Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 ">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 ">
                             @foreach ($groupedProjects[$categoryKey] as $project)
                                 <article
                                     class="group relative bg-white border-2 border-[#1A1A1A] rounded-md overflow-hidden transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#1A1A1A]"
@@ -91,8 +91,8 @@
                                     </div>
 
                                     <!-- Content -->
-                                    <div class="p-8 bg-white relative z-10 flex flex-col h-[calc(100%-15rem)]">
-                                        <h4 class="text-2xl font-black text-[#1A1A1A] mb-4 leading-none uppercase tracking-tight group-hover:text-[#FF6B55] transition-colors"
+                                    <div class="p-6 lg:p-8 bg-white relative z-10 flex flex-col h-[calc(100%-15rem)]">
+                                        <h4 class="text-xl lg:text-2xl font-black text-[#1A1A1A] mb-3 lg:mb-4 leading-none uppercase tracking-tight group-hover:text-[#FF6B55] transition-colors"
                                             style="font-family: 'Space Grotesk', sans-serif;">
                                             {{ $project->title }}
                                         </h4>

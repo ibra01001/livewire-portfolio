@@ -10,6 +10,24 @@
 │   │   ├── Actions
 │   │   │   └── Logout.php
 │   │   ├── Admin
+│   │   │   ├── Career
+│   │   │   │   ├── Certification
+│   │   │   │   │   ├── Create.php
+│   │   │   │   │   ├── Edit.php
+│   │   │   │   │   └── Index.php
+│   │   │   │   ├── Education
+│   │   │   │   │   ├── Create.php
+│   │   │   │   │   ├── Edit.php
+│   │   │   │   │   └── Index.php
+│   │   │   │   ├── Experience
+│   │   │   │   │   ├── Create.php
+│   │   │   │   │   ├── Edit.php
+│   │   │   │   │   └── Index.php
+│   │   │   │   ├── Index.php
+│   │   │   │   └── Language
+│   │   │   │       ├── Create.php
+│   │   │   │       ├── Edit.php
+│   │   │   │       └── Index.php
 │   │   │   ├── Dashboard.php
 │   │   │   ├── Messages
 │   │   │   │   └── Index.php
@@ -23,12 +41,17 @@
 │   │   │       ├── Create.php
 │   │   │       ├── Edit.php
 │   │   │       └── Index.php
+│   │   ├── Career.php
 │   │   ├── Contact.php
 │   │   ├── Forms
 │   │   │   └── LoginForm.php
 │   │   ├── Home.php
 │   │   └── Projects.php
 │   ├── Models
+│   │   ├── Certification.php
+│   │   ├── Education.php
+│   │   ├── Experience.php
+│   │   ├── Language.php
 │   │   ├── Message.php
 │   │   ├── Profile.php
 │   │   ├── Project.php
@@ -82,7 +105,8 @@
 │   │   ├── 2026_01_27_000000_create_exeperiences_table.php
 │   │   ├── 2026_01_27_000001_create_education_table.php
 │   │   ├── 2026_01_27_000002_create_certifications_table.php
-│   │   └── 2026_01_27_000003_create_languages_table.php
+│   │   ├── 2026_01_27_000003_create_languages_table.php
+│   │   └── 2026_01_27_172915_add_is_active_and_order_to_career_tables.php
 │   └── seeders
 │       ├── AdminUserSeeder.php
 │       └── DatabaseSeeder.php
@@ -130,6 +154,7 @@
 │       │   ├── primary-button.blade.php
 │       │   ├── responsive-nav-link.blade.php
 │       │   ├── secondary-button.blade.php
+│       │   ├── site-background.blade.php
 │       │   └── text-input.blade.php
 │       ├── layouts
 │       │   ├── app.blade.php
@@ -137,6 +162,24 @@
 │       └── livewire
 │           ├── about.blade.php
 │           ├── admin
+│           │   ├── career
+│           │   │   ├── certification
+│           │   │   │   ├── create.blade.php
+│           │   │   │   ├── edit.blade.php
+│           │   │   │   └── index.blade.php
+│           │   │   ├── education
+│           │   │   │   ├── create.blade.php
+│           │   │   │   ├── edit.blade.php
+│           │   │   │   └── index.blade.php
+│           │   │   ├── experience
+│           │   │   │   ├── create.blade.php
+│           │   │   │   ├── edit.blade.php
+│           │   │   │   └── index.blade.php
+│           │   │   ├── index.blade.php
+│           │   │   └── language
+│           │   │       ├── create.blade.php
+│           │   │       ├── edit.blade.php
+│           │   │       └── index.blade.php
 │           │   ├── dashboard.blade.php
 │           │   ├── messages
 │           │   │   └── index.blade.php
@@ -150,6 +193,7 @@
 │           │       ├── create.blade.php
 │           │       ├── edit.blade.php
 │           │       └── index.blade.php
+│           ├── career.blade.php
 │           ├── contact.blade.php
 │           ├── .gitkeep
 │           ├── home.blade.php
@@ -168,7 +212,8 @@
 │           │   ├── delete-user-form.blade.php
 │           │   ├── update-password-form.blade.php
 │           │   └── update-profile-information-form.blade.php
-│           └── projects.blade.php
+│           ├── projects.blade.php
+│           └── show.blade.php
 ├── routes
 │   ├── auth.php
 │   ├── console.php
@@ -190,4 +235,4 @@
 │       └── ExampleTest.php
 └── vite.config.js
 
-49 directories, 142 files
+59 directories, 177 files

@@ -19,7 +19,7 @@
                 </svg>
             </h2>
             <p class="text-xl text-[#3D3D3D] max-w-2xl mx-auto mt-8 font-medium">
-                My professional journey, academic background, and official certifications.
+                My journey, academic background, and certifications.
             </p>
         </div>
 
@@ -101,7 +101,7 @@
             </div>
 
             @if($profile && $profile->experiences->count() > 0)
-                <div class="relative pl-8 border-l-4 border-[#1A1A1A] space-y-20 ml-4">
+                <div class="relative pl-4 md:pl-8 border-l-2 md:border-l-4 border-[#1A1A1A] space-y-12 md:space-y-20 ml-2 md:ml-4">
                     @foreach($profile->experiences as $experience)
                         <!-- Experience Card -->
                         <div class="relative">
@@ -112,7 +112,7 @@
 
                                 <div class="p-8">
                                     <!-- Top Section: Logo + Main Info -->
-                                    <div class="flex flex-col md:flex-row gap-8 mb-6">
+                                    <div class="flex flex-col md:flex-row gap-6 md:gap-8 mb-6">
                                         <!-- LOGO CONTAINER -->
                                         @if($experience->company_logo)
                                             <div class="flex-shrink-0 mx-auto md:mx-0">
@@ -213,7 +213,7 @@
         </div>
 
         <!-- Two Column Layout for Education & Others -->
-        <div class="grid lg:grid-cols-2 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <!-- Education -->
             <div>
                 <div class="flex items-center space-x-6 mb-8 uppercase">

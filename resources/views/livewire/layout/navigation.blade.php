@@ -60,7 +60,7 @@ new class extends Component {
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">
                 <button @click="open = ! open"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-[#1A1A1A] hover:text-[#FF6B55] hover:bg-[#F5F3EF] focus:outline-none transition duration-150 ease-in-out border-2 border-[#1A1A1A]">
+                    class="inline-flex items-center justify-center p-2 rounded-md text-[#FFFFFF] hover:text-[#FF6B55] hover:bg-[#1A1A1A] focus:outline-none transition duration-150 ease-in-out border-2 border-[#FFFFFF]">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -74,28 +74,40 @@ new class extends Component {
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden border-t-2 border-[#1A1A1A] bg-[#F5F3EF]">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden border-t-2 border-[#1A1A1A] bg-[#1A1A1A]">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('home')" wire:navigate
-                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-white"
+                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-[#2A2A2A] border-transparent"
                 style="font-family: 'Space Grotesk', sans-serif;">
                 {{ __('Home') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('about')" wire:navigate
-                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-white"
+                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-[#2A2A2A] border-transparent"
                 style="font-family: 'Space Grotesk', sans-serif;">
                 {{ __('About') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('projects')" wire:navigate
-                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-white"
+                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-[#2A2A2A] border-transparent"
                 style="font-family: 'Space Grotesk', sans-serif;">
                 {{ __('Projects') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('career')" wire:navigate
+                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-[#2A2A2A] border-transparent"
+                style="font-family: 'Space Grotesk', sans-serif;">
+                {{ __('Career') }}
+            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('contact')" wire:navigate
-                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-white"
+                class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-[#2A2A2A] border-transparent"
                 style="font-family: 'Space Grotesk', sans-serif;">
                 {{ __('Contact') }}
             </x-responsive-nav-link>
+            @auth
+                <x-responsive-nav-link :href="route('admin.dashboard')" wire:navigate
+                    class="text-[#FFFFFF] font-bold hover:text-[#FF6B55] hover:bg-[#2A2A2A] border-transparent"
+                    style="font-family: 'Space Grotesk', sans-serif;">
+                    Admin
+                </x-responsive-nav-link>
+            @endauth
         </div>
     </div>
 </nav>
