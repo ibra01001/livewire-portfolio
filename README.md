@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="public/favicon.ico" width="80" alt="Portfolio Logo">
-</p>
+
 
 <h1 align="center">Personal Portfolio – Laravel Livewire</h1>
 
