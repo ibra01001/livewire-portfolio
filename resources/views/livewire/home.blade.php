@@ -153,8 +153,8 @@
                     </svg>
                 </div>
             </div>
+            <livewire:Chatbot />
         </div>
-
         <!-- Large decorative elements -->
         <div
             class="absolute top-20 right-10 w-64 h-64 border-4 border-[#FF6B55] rounded-full opacity-10 pointer-events-none">
