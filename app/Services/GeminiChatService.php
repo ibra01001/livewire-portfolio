@@ -164,6 +164,7 @@ class GeminiChatService
     public function reply(string $message): string
     {
         try {
+            /** @var \Illuminate\Http\Client\Response $response */
             $response = Http::timeout(30)
                 ->post($this->apiUrl . '?key=' . $this->apiKey, [
                     'contents' => [
@@ -197,7 +198,6 @@ class GeminiChatService
                 404 => 'AI model not found. Please check the model configuration.',
                 default => 'Sorry, there was an error processing your request. Please try again.',
             };
-
         } catch (\Exception $e) {
             Log::error('Gemini Service Exception', [
                 'message' => $e->getMessage()

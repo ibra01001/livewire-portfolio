@@ -32,11 +32,11 @@
                 </h3>
 
                 @if (session()->has('message'))
-                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
-                        role="alert">
-                        <strong class="font-bold">Success!</strong>
-                        <span class="block sm:inline">{{ session('message') }}</span>
-                    </div>
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
+                    role="alert">
+                    <strong class="font-bold">Success!</strong>
+                    <span class="block sm:inline">{{ session('message') }}</span>
+                </div>
                 @endif
 
                 <form wire:submit.prevent="submit" class="space-y-6">
@@ -48,7 +48,7 @@
                         </label>
                         <input type="text" id="name" name="name" wire:model="name"
                             class="w-full px-4 py-3 bg-white border-2 border-[#1A1A1A] rounded-md focus:ring-0 focus:border-[#FF6B55] text-[#1A1A1A] placeholder-gray-400 transition-colors duration-200 outline-none"
-                            placeholder="John Doe" required>
+                            placeholder="ibrahim remili" required>
                         @error('name') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
 
@@ -60,7 +60,7 @@
                         </label>
                         <input type="email" id="email" name="email" wire:model="email"
                             class="w-full px-4 py-3 bg-white border-2 border-[#1A1A1A] rounded-md focus:ring-0 focus:border-[#FF6B55] text-[#1A1A1A] placeholder-gray-400 transition-colors duration-200 outline-none"
-                            placeholder="john@example.com" required>
+                            placeholder="mohamedremili500@gmail.com" required>
                         @error('email') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
 
@@ -72,7 +72,7 @@
                         </label>
                         <textarea id="message" name="message" wire:model="message" rows="5"
                             class="w-full px-4 py-3 bg-white border-2 border-[#1A1A1A] rounded-md focus:ring-0 focus:border-[#FF6B55] text-[#1A1A1A] placeholder-gray-400 transition-colors duration-200 outline-none resize-none"
-                            placeholder="Tell me about your project..." required></textarea>
+                            placeholder="send details here..." required></textarea>
                         @error('message') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
 
@@ -81,11 +81,7 @@
                         class="w-full inline-flex items-center justify-center px-6 py-4 bg-[#FF6B55] border-2 border-[#1A1A1A] text-white font-bold text-lg rounded-md transition-all duration-200 shadow-[4px_4px_0px_0px_#1A1A1A] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] focus:outline-none"
                         style="font-family: 'Space Grotesk', sans-serif;">
                         Send Message
-                        <svg class="w-5 h-5 ml-2 transform rotate-12" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
+
                     </button>
                 </form>
             </div>
@@ -285,24 +281,24 @@
 
                 <!-- Recent Messages (Admin) -->
                 @if ($messages->isNotEmpty())
-                    <div class="bg-white border-2 border-[#1A1A1A] rounded-lg p-6 mt-8">
-                        <h3 class="text-xl font-bold text-[#1A1A1A] mb-4 border-b-2 border-[#1A1A1A] pb-2"
-                            style="font-family: 'Space Grotesk', sans-serif;">
-                            Recent Inquiries
-                        </h3>
-                        <div class="space-y-4 max-h-64 overflow-y-auto pr-2 custom-scrollbar">
-                            @foreach ($messages->take(3) as $msg)
-                                <div
-                                    class="p-3 bg-[#F5F3EF] border border-[#1A1A1A] rounded hover:border-[#FF6B55] transition-colors">
-                                    <div class="flex justify-between items-start mb-1">
-                                        <span class="font-bold text-[#1A1A1A] text-sm">{{ $msg->name }}</span>
-                                        <span class="text-xs text-[#3D3D3D]">{{ $msg->created_at->diffForHumans() }}</span>
-                                    </div>
-                                    <p class="text-xs text-[#3D3D3D] line-clamp-1">{{ $msg->message }}</p>
-                                </div>
-                            @endforeach
+                <div class="bg-white border-2 border-[#1A1A1A] rounded-lg p-6 mt-8">
+                    <h3 class="text-xl font-bold text-[#1A1A1A] mb-4 border-b-2 border-[#1A1A1A] pb-2"
+                        style="font-family: 'Space Grotesk', sans-serif;">
+                        Recent Inquiries
+                    </h3>
+                    <div class="space-y-4 max-h-64 overflow-y-auto pr-2 custom-scrollbar">
+                        @foreach ($messages->take(3) as $msg)
+                        <div
+                            class="p-3 bg-[#F5F3EF] border border-[#1A1A1A] rounded hover:border-[#FF6B55] transition-colors">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="font-bold text-[#1A1A1A] text-sm">{{ $msg->name }}</span>
+                                <span class="text-xs text-[#3D3D3D]">{{ $msg->created_at->diffForHumans() }}</span>
+                            </div>
+                            <p class="text-xs text-[#3D3D3D] line-clamp-1">{{ $msg->message }}</p>
                         </div>
+                        @endforeach
                     </div>
+                </div>
                 @endif
             </div>
         </div>
@@ -310,23 +306,23 @@
 </div>
 
 @push('styles')
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Inter:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <style>
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet">
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
 
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #F5F3EF;
-        }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #F5F3EF;
+    }
 
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background-color: #1A1A1A;
-            border-radius: 20px;
-        }
-    </style>
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #1A1A1A;
+        border-radius: 20px;
+    }
+</style>
 @endpush
