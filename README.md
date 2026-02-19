@@ -1,59 +1,129 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+
+<h1 align="center">Personal Portfolio – Laravel Livewire</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  A modern, dynamic, and customizable developer portfolio built with Laravel, Livewire, and Tailwind CSS.
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>Cartoony UI • Illustrations • Interactive • Scalable</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ About The Project
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project is my **personal portfolio website**, designed to showcase my skills, projects, and career journey in a **fun, visual, and interactive way**.
 
-## Learning Laravel
+Instead of using a static frontend or heavy JavaScript frameworks, the portfolio relies on **Laravel Livewire** to deliver a smooth SPA-like experience while keeping the backend clean and maintainable.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+The goal is to create a portfolio that feels **alive**, **playful**, and **professional at the same time**.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🎨 Design & Style
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- 🧩 **Cartoony / illustrated style**
+- 🎯 Friendly UI with soft colors and playful layouts
+- 💡 Focus on clarity, storytelling, and personality
+- ⚡ Smooth interactions without excessive JavaScript
 
-### Premium Partners
+This design choice makes the portfolio stand out from traditional, overly minimal portfolios.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🚀 Features
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Public Side
+- Dynamic **Home**, **About**, **Projects**, **Career**, and **Contact** sections
+- Projects displayed with categories and descriptions
+- Career timeline (education, experience, certifications, languages)
+- Responsive design for all devices
+- Contact form with database storage
 
-## Code of Conduct
+### Admin Dashboard
+- Full admin panel built with Livewire
+- Manage:
+  - Profile information
+  - Projects
+  - Skills (with levels & categories)
+  - Education & experience
+  - Certifications & languages
+  - Messages from visitors
+- Clean CRUD system without page reloads
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🧠 Planned Features
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- 🤖 **AI Agent**  
+  A future AI assistant that represents *me* and answers visitor questions about:
+  - My skills
+  - My projects
+  - My experience
 
-## License
+- 📄 **CV Downloader**
+  - Downloadable CV (PDF)
+  - Auto-updated from database content
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+- **Laravel**
+- **Livewire** (main interaction layer)
+- Eloquent ORM
+- Laravel Authentication & Authorization
+
+### Frontend
+- **Blade**
+- **Tailwind CSS**
+- Minimal JavaScript (only where necessary)
+
+### Database
+- SQLite (development)
+- MySQL compatible (production)
+
+### Tooling
+- Vite
+- Composer
+- npm
+
+---
+
+## 🧩 Architecture Philosophy
+
+- Server-driven UI using Livewire
+- Clear separation between:
+  - Business logic
+  - UI components
+  - Data models
+- Easy to extend (React / API ready if needed later)
+
+This makes the project **scalable**, **maintainable**, and **future-proof**.
+
+---
+
+## 📸 Screenshots
+
+> Screenshots will be added soon.
+
+---
+
+## ⚙️ Installation (Local)
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+
+composer install
+npm install
+npm run build
+
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+
+php artisan serve
